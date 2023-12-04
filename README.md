@@ -1,3 +1,6 @@
+This is a modified switch fightstick code for AtMega32U4 based chips on arduino. I made this specifically for an Arduino Micro Leonardo board to work for "Groove Coaster Wai Wai Party" on a switch for a friend's build
+
+# ORIGINAL README
 ## Switch Fightstick Code (Atmega32U4)
 
 This one is a working switch fightstick sketch
