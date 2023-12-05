@@ -47,11 +47,6 @@ const int y = 11;
 //							 
 const int Inputs[y] =		{3,	2,		5,	4,	14,	16,	10,	15,	A0,	A1, 9};
 
-// A button = 1
-// B button = 2
-// X button = 3
-// Y button = 4
-
 // Variables that will change:
 int currentState[y];
 int lastFlickerableState[y];
@@ -60,9 +55,6 @@ bool lastSteadyState[y];
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
 unsigned long lastDebounceTime[y];	// the last time the output pin was toggled
-
-// Millisecond clock for holding button combination for "plus"
-
 
 
 // Some setup needs to run in the loop() due to variables, but also run only once
@@ -93,8 +85,10 @@ void setup() {
 
 void loop() {
 	HID_Task();
+	
     // We also need to run the main USB management task.
     USB_USBTask();
+	
 	if (oneTime) {
 		oneTime = false;
 		for (int x = 0; x < y; x++) {
